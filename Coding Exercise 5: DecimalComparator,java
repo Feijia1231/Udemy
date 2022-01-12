@@ -11,6 +11,7 @@
 //TIP: Use paper and pencil.
 //TIP: Use casting.
 
+import
 
 public class DecimalComparator {
     public static boolean areEqualByThreeDecimalPlaces(double number1, double number2)
