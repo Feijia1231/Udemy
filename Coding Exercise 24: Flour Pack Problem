@@ -1,0 +1,19 @@
+public class FlourPacker {
+    public static void main(String[] args) {
+        System.out.println("The pack (2, 0, 9) is possible: " +
+                canPack(2, 0, 9));
+    }
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        //The parameter bigCount represents the count of big flour bags (5 kilos each).
+        //The parameter smallCount represents the count of small flour bags (1 kilo each).
+        //The parameter goal represents the goal amount of kilos of flour needed to assemble a package.
+
+        if (bigCount < 0 || smallCount < 0 || goal < 0) {
+            return false;
+        }
+        if ((bigCount * 5) + (smallCount * 4) >= goal) {
+            return (goal % 5 <= smallCount);
+        }
+        return false;
+    }
+}
